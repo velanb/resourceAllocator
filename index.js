@@ -15,6 +15,7 @@ let allocator = new ResourceAllocator(server);
   let numberOfCPUs = 200;
   let hours = 24;
   let data = await allocator.get_cost(hours, numberOfCPUs, maxPrice);
+
   console.log(data)
 })();
 

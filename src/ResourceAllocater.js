@@ -65,7 +65,9 @@ class ResourceAllocator {
       }
     }).then(data => {
       let costData = CostUtil.costSum(data.regionAlloc, data.costAlloc);
-      return costData;
+      return costData.sort((a, b) => {
+        return a.total_cost - b.total_cost;
+      });
     }).catch(err => {
       throw new ResourseAllocatorError(err.message)
     })
