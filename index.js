@@ -8,14 +8,14 @@ const {
 } = require('./config/config')
 
 // Example 
+let server = new Server(server_CPUs, region_server_dict, region_cost_dict);
+let allocator = new ResourceAllocator(server);
 (async () => {
-  let server = new Server(server_CPUs, region_server_dict, region_cost_dict);
-  let allocator = new ResourceAllocator(server);
   let maxPrice = 100;
   let numberOfCPUs = 200;
   let hours = 24;
   let data = await allocator.get_cost(hours, numberOfCPUs, maxPrice);
-  console.log(JSON.stringify(data))
+  console.log(data)
 })();
 
 module.exports = {

@@ -1,12 +1,12 @@
 {
-  "name": "instanceallocator",
+  "name": "resourceallocator",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --watchAll"
   },
-  "author": "",
+  "author": "Velan",
   "license": "ISC",
   "devDependencies": {
     "jest": "^25.1.0"
